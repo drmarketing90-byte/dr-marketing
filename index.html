@@ -140,6 +140,56 @@
                 1024: { slidesPerView: 3 }
             }
         });
+
+        document.addEventListener('DOMContentLoaded', function() {
+    const lightbox = document.getElementById('imageLightbox');
+    const fullImg = document.getElementById('fullImage');
+    const allImages = Array.from(document.querySelectorAll('.work-card img'));
+    let currentIndex = 0;
+
+    // فتح الصورة وتحديد ترتيبها
+    allImages.forEach((img, index) => {
+        img.addEventListener('click', () => {
+            currentIndex = index;
+            updateLightbox();
+            lightbox.style.display = 'block';
+            setTimeout(() => lightbox.classList.add('active'), 10);
+        });
+    });
+
+    function updateLightbox() {
+        fullImg.src = allImages[currentIndex].src;
+    }
+
+    // وظائف الأسهم
+    document.getElementById('nextBtn').onclick = (e) => { e.stopPropagation(); nextImg(); };
+    document.getElementById('prevBtn').onclick = (e) => { e.stopPropagation(); prevImg(); };
+
+    function nextImg() {
+        currentIndex = (currentIndex + 1) % allImages.length;
+        updateLightbox();
+    }
+
+    function prevImg() {
+        currentIndex = (currentIndex - 1 + allImages.length) % allImages.length;
+        updateLightbox();
+    }
+
+    // دعم السحب (Swipe) للموبايل
+    let touchStartX = 0;
+    lightbox.addEventListener('touchstart', e => touchStartX = e.changedTouches[0].screenX);
+    lightbox.addEventListener('touchend', e => {
+        let touchEndX = e.changedTouches[0].screenX;
+        if (touchStartX - touchEndX > 50) nextImg(); // سحب لليسار
+        if (touchEndX - touchStartX > 50) prevImg(); // سحب لليمين
+    });
+
+    // إغلاق
+    document.querySelector('.close-lightbox').onclick = () => {
+        lightbox.classList.remove('active');
+        setTimeout(() => lightbox.style.display = 'none', 300);
+    };
+});
     </script>
 
     <div class="floating-contact">
@@ -157,8 +207,17 @@
     </a>
 </div>
 
+<div id="imageLightbox" class="lightbox">
+    <span class="close-lightbox">&times;</span>
+    
+    <button class="lightbox-prev" id="prevBtn">&#10094;</button>
+    <img class="lightbox-content" id="fullImage">
+    <button class="lightbox-next" id="nextBtn">&#10095;</button>
+</div>
+
 </body>
 
 </html>
+
 
 
