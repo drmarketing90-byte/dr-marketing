@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DrMarketing | Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+    <div class="logo">DrMarketing<span></span></div>
+    <div class="nav-links">
+        <a href="#">الرئيسية</a>
+        <a href="#work">أعمالنا</a>
+        <a href="#contact">اتصل بنا</a>
+    </div>
+</nav>
+
+    <section style="text-align: center; padding: 100px 10%;">
+        <h1>مستعد لرفع مستوى هويتك الطبية؟</h1>
+        <p>نحن نحول المعلومات الطبية المعقدة إلى تصاميم بصرية جذابة وسهلة الفهم.</p>
+        <br>
+        <a href="https://wa.me/201119325442?text=أهلاً DrMarketing، أنا مهتم ببدء مشروع تصميم طبي جديد معكم." class="cta-button">ابدأ مشروعك الآن</a>
+    </section>
+
+<section class="portfolio" id="work">
+    <div class="section-title">
+        <h3>معرض التخصصات الطبية</h3>
+        <p>تصفح أعمالنا حسب التخصص (اسحب لليمين واليسار)</p>
+    </div>
+
+    <div class="category-wrapper">
+        <h4 class="category-title">👶 عيادات الأطفال</h4>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><div class="work-card"><img src="images/ad1.jpg"></div></div>
+                <div class="swiper-slide"><div class="work-card"><img src="images/ad2.jpg"></div></div>
+                <div class="swiper-slide"><div class="work-card"><img src="images/ad3.jpg"></div></div>
+                <div class="swiper-slide"><div class="work-card"><img src="images/ad4.jpg"></div></div>
+                <div class="swiper-slide"><div class="work-card"><img src="images/ad5.jpg"></div></div>
+                <div class="swiper-slide"><div class="work-card"><img src="images/ad6.jpg"></div></div>
+                <div class="swiper-slide"><div class="work-card"><img src="images/ad7.jpg"></div></div>
+                <div class="swiper-slide"><div class="work-card"><img src="images/ad8.jpg"></div></div>
+                <div class="swiper-slide"><div class="work-card"><img src="images/ad9.jpg"></div></div>
+                <div class="swiper-slide"><div class="work-card"><img src="images/ad10.jpg"></div></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+    <div class="category-wrapper">
+        <h4 class="category-title">🥗 التغذية العلاجية</h4>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><div class="work-card"><img src="images/nutri-1.jpg"></div></div>
+                <div class="swiper-slide"><div class="work-card"><img src="images/nutri-2.jpg"></div></div>
+                <div class="swiper-slide"><div class="work-card"><img src="images/nutri-3.jpg"></div></div>
+                <div class="swiper-slide"><div class="work-card"><img src="images/nutri-4.jpg"></div></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+    <div class="category-wrapper">
+        <h4 class="category-title">🦷 عيادات الأسنان</h4>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><div class="work-card"><img src="images/dental-1.jpg"></div></div>
+                <div class="swiper-slide"><div class="work-card"><img src="images/dental-2.jpg"></div></div>
+                <div class="swiper-slide"><div class="work-card"><img src="images/dental-3.jpg"></div></div>
+                <div class="swiper-slide"><div class="work-card"><img src="images/dental-4.jpg"></div></div>
+                <div class="swiper-slide"><div class="work-card"><img src="images/dental-5.jpg"></div></div>
+                <div class="swiper-slide"><div class="work-card"><img src="images/dental-6.jpg"></div></div>
+                <div class="swiper-slide"><div class="work-card"><img src="images/dental-7.jpg"></div></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>
+
+    <section id="contact" style="padding: 50px 10%; text-align: center;">
+        <h3>تواصل مباشر مع DrMarketing</h3>
+        <p>Email:drmarketing90.com</p>
+        <p>WhatsApp: +201119325442</p>
+    </section>
+
+    <footer>
+        <p>Copyright © 2026 DrMarketing - Medical Graphic Design Agency</p>
+    </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,      /* يعرض كرت واحد في الموبايل */
+            spaceBetween: 20,     /* المسافة بين الكروت */
+            grabCursor: true,      /* يغير شكل الماوس ليد عند السحب */
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {         /* إعدادات الشاشات الكبيرة */
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 }
+            }
+        });
+    </script>
+
+    <div class="floating-contact">
+    <a href="https://wa.me/201119325442?text=أهلاً DrMarketing، أريد الاستفسار عن خدمات التصميم الطبي" 
+       class="fab whatsapp" 
+       target="_blank" 
+       title="تواصل عبر واتساب">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 35px;">
+    </a>
+    
+    <a href="tel:+201119325442" class="fab phone" title="اتصل بنا">
+        <span>📞</span>
+    </a>
+</div>
+
+</body>
+</html>
