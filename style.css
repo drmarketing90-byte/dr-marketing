@@ -421,13 +421,53 @@ footer {
     100% { transform: translateY(0px); }
 }
 
-/* التوافق مع الموبايل */
+/* تحسين توافق العنوان الرئيسي مع شاشات الموبايل */
 @media (max-width: 768px) {
-    .cta-box {
-        padding: 30px 20px;
-        border-radius: 20px;
+    .hero h1 {
+        /* تصغير حجم الخط ليناسب عرض الشاشة */
+        font-size: 1.6rem !important; 
+        
+        /* تقليل المسافات بين الحروف والكلمات قليلاً */
+        letter-spacing: -0.5px;
+        line-height: 1.2;
+        
+        /* التأكد من استخدام كامل عرض الشاشة المتاح */
+        max-width: 95%;
+        margin: 0 auto 15px auto;
+        
+        /* منع الكلمات من الانكسار بشكل عشوائي */
+        white-space: normal; 
+        word-break: keep-all;
     }
-    .cta-box h2 { font-size: 1.4rem; }
+
+    .hero p {
+        font-size: 1rem !important;
+        padding: 0 10px;
+    }
+    
+    .hero-content {
+        padding: 100px 10px 50px 10px; /* ضبط الحشو العلوي */
+    }
+}
+
+/* للشاشات الصغيرة جداً (مثل iPhone SE) */
+@media (max-width: 380px) {
+    .hero h1 {
+        font-size: 1.4rem !important;
+    }
+
+    /* تصغير اللوجو في الموبايل */
+.logo img {
+    height: 40px !important; /* تقليل الارتفاع ليعطي مساحة للعنوان */
+    width: auto;
+    transition: 0.3s;
+}
+
+/* تقليل الفراغ العلوي والسفلي للهيدر في الموبايل */
+.navbar {
+    padding: 10px 15px !important;
+ }
+
 }
 
 .lightbox {
@@ -498,3 +538,4 @@ footer {
 @media (max-width: 768px) {
     .lightbox-prev, .lightbox-next { display: none; }
 }
+
