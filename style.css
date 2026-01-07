@@ -365,4 +365,68 @@ footer {
     .floating-title-box h3 { font-size: 1.3rem; }
 }
 
+/* تنسيق الصندوق العائم */
+.cta-floating {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.cta-box {
+    background: linear-gradient(135deg, #1a2533 0%, #243142 100%); /* لون داكن متناسق مع الكروت */
+    padding: 40px;
+    border-radius: 30px;
+    color: white;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid rgba(74, 144, 226, 0.3);
+    animation: floatingAnimation 3s ease-in-out infinite; /* أنميشن العوم */
+}
+
+.cta-box h2 {
+    color: #4A90E2;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+.cta-box p {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* الزر الاحترافي داخل البوكس */
+.cta-button-pro {
+    display: inline-block;
+    padding: 15px 35px;
+    background: #4A90E2;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(74, 144, 226, 0.4);
+}
+
+.cta-button-pro:hover {
+    background: white;
+    color: #1a2533;
+    transform: scale(1.05);
+}
+
+/* تعريف أنميشن العوم */
+@keyframes floatingAnimation {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+/* التوافق مع الموبايل */
+@media (max-width: 768px) {
+    .cta-box {
+        padding: 30px 20px;
+        border-radius: 20px;
+    }
+    .cta-box h2 { font-size: 1.4rem; }
+}
 
