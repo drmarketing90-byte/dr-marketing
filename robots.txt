@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://drmarketing90-byte.github.io/dr-marketing/sitemap.xml
