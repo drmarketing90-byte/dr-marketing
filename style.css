@@ -539,3 +539,26 @@ footer {
     .lightbox-prev, .lightbox-next { display: none; }
 }
 
+/* تحسين تباين نصوص العناوين الفرعية */
+.category-title {
+    color: #003366 !important; /* لون كحلي غامق وواضح */
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+/* تحسين وضوح نصوص الوصف */
+.work-card p {
+    color: #1a1a1a !important; /* أسود صريح بدلاً من الرمادي */
+}
+
+/* تكبير مساحة الضغط على أزرار التنقل */
+.swiper-pagination-bullet {
+    width: 12px !important;
+    height: 12px !important;
+    margin: 0 8px !important; /* مسافة أمان لمنع الخطأ في الضغط */
+}
+
+/* التأكد من وجود مسافة كافية بين الروابط في القائمة */
+.nav-links li {
+    padding: 10px 15px; 
+}
