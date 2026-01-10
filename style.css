@@ -562,3 +562,79 @@ footer {
 .nav-links li {
     padding: 10px 15px; 
 }
+
+.testimonials .feature-card {
+    border-top: 4px solid #004aad;
+    font-style: italic;
+    background: #fff;
+}
+
+#about p {
+    color: #444;
+    padding: 20px;
+}
+
+/* تنسيق شبكة الآراء */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+/* تصميم الكرت المربع */
+.testimonial-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    position: relative;
+    border: 1px solid #eee;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+}
+
+/* تنسيق صورة الطبيب في المنتصف */
+.doc-img-container {
+    width: 80px;
+    height: 80px;
+    margin: -70px auto 15px auto; /* لرفع الصورة فوق المربع */
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.doc-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* النجوم والرأي */
+.stars {
+    color: #ffc107;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.testimonial-card p {
+    font-style: italic;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.testimonial-card h4 {
+    color: #004aad;
+    margin-bottom: 5px;
+}
+
+.testimonial-card span {
+    font-size: 0.9rem;
+    color: #888;
+}
