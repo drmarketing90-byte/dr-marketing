@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Allow: /images/
 
 Sitemap: https://drmarketing90-byte.github.io/dr-marketing/sitemap.xml
