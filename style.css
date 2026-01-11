@@ -574,67 +574,72 @@ footer {
     padding: 20px;
 }
 
-/* تنسيق شبكة الآراء */
-.testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 40px;
-    margin-top: 50px;
-}
-
-/* تصميم الكرت المربع */
+/* تنسيق كرت الرأي */
 .testimonial-card {
-    background: #fff;
-    padding: 30px;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    flex: 0 0 300px;
+    background: #ffffff;
+    padding: 60px 20px 30px; /* بادينج علوي كبير لترك مساحة للصورة */
+    border-radius: 20px;
     position: relative;
-    border: 1px solid #eee;
-    transition: transform 0.3s ease;
+    text-align: center; /* لتوسيط كل النصوص والنجوم */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* توسيط العناصر أفقياً */
 }
 
-.testimonial-card:hover {
-    transform: translateY(-10px);
-}
-
-/* تنسيق صورة الطبيب في المنتصف */
-.doc-img-container {
-    width: 80px;
-    height: 80px;
-    margin: -70px auto 15px auto; /* لرفع الصورة فوق المربع */
+/* تنسيق الصورة (دائرية وصغيرة) */
+.testimonial-card img {
+    width: 90px !important;
+    height: 90px !important;
     border-radius: 50%;
-    overflow: hidden;
-    border: 4px solid #fff;
+    object-fit: cover;
+    position: absolute;
+    top: -45px; /* رفع نصفها فوق الكرت */
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid #fff;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-.doc-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* النجوم والرأي */
+/* تنسيق النجوم أسفل الصورة مباشرة */
 .stars {
-    color: #ffc107;
-    margin-bottom: 15px;
+    color: #ffc107; /* لون ذهبي للنجوم */
     font-size: 1.2rem;
+    margin-bottom: 15px;
+    margin-top: 10px; /* مسافة بسيطة بعد الصورة */
 }
 
-.testimonial-card p {
+/* تنسيق نص الرأي */
+.quote {
     font-style: italic;
     color: #555;
     line-height: 1.6;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
 }
 
-.testimonial-card h4 {
-    color: #004aad;
+/* تمييز اسم الطبيب بلون خاص */
+.doctor-name {
+    color: #0056b3; /* لون أزرق احترافي ومميز */
+    font-size: 1.1rem;
+    font-weight: bold;
     margin-bottom: 5px;
 }
 
-.testimonial-card span {
-    font-size: 0.9rem;
-    color: #888;
+/* المسمى الوظيفي */
+.specialty {
+    color: #777;
+    font-size: 0.85rem;
+}
+
+/* حاوية السحب (Scroll) */
+.testimonials-grid {
+    display: flex;
+    gap: 30px;
+    padding: 80px 20px 40px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none; /* إخفاء شريط التمرير */
 }
